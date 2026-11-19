@@ -1,0 +1,145 @@
+{
+  "date": "2026-11-20",
+  "label": "11月20日（金）号",
+  "coverage": "11月18日〜19日",
+  "minutes": 5,
+  "points": [
+    "六花亭の通販サイトで決済画面が改ざんされ、カード情報約8,000件が流出の恐れ",
+    "家庭でも人気のSynology製NASに攻撃が確認。更新していなければ今すぐDSMの更新を",
+    "Javaの重大な穴「Java4Shell」が公表。Jira・Jenkinsなど多くの業務ソフトに影響",
+    "ウクライナが「IT窓口を装う」ランサム集団を摘発。被害企業の支払いは4,050万ドル超"
+  ],
+  "items": [
+    {
+      "cat": "japan",
+      "level": "high",
+      "headline": "六花亭の通販でカード情報約8,000件流出の恐れ",
+      "body": "北海道の菓子メーカー六花亭は18日、オンラインショップが不正アクセスを受け、決済画面のプログラムが書き換えられていたと発表しました。10月21日夜から11月18日午前までにカードで支払った人のカード番号（全桁）、名義、有効期限、セキュリティコードが外部に送られた恐れがあり、現時点で約8,000件とされます。サイトは停止中で、対象者には個別に連絡するとしています。",
+      "why": "セキュリティコードまでそろうと、ネット通販で不正に使われやすくなります。お歳暮の時期で利用者も多い時期です。",
+      "action": "期間中に六花亭の通販でカード払いした人は、明細を確認し、身に覚えのない請求はカード会社へ連絡する。",
+      "src": "ITmedia NEWS",
+      "url": "https://www.itmedia.co.jp/news/article/2611/19/2000003316/"
+    },
+    {
+      "cat": "vuln",
+      "level": "high",
+      "headline": "Synology製NASの重大な穴、攻撃を確認",
+      "body": "米CISA（サイバーセキュリティ・社会基盤安全保障庁）は18日、悪用が確認された脆弱性（ソフトの欠陥）4件を要注意リストに追加しました。中でも、家庭や小さな会社で使われるSynologyのNAS（ネットワーク接続型の保存装置）の基本ソフトDSMの穴は、ログインなしで外から乗っ取られる恐れがある深刻なものです。修正版は既に出ており、米連邦機関には21日までの対応が求められています。",
+      "why": "NASには写真や仕事のファイルがまとめて入っています。乗っ取られると、データを盗まれたり暗号化されたりする恐れがあります。",
+      "action": "Synology製NASを使っていれば管理画面からDSMを最新版に更新し、不要な外部公開を止める。",
+      "src": "SecurityOnline",
+      "url": "https://securityonline.info/cisa-adds-4-exploited-flaws-kev-synology-litellm/"
+    },
+    {
+      "cat": "vuln",
+      "level": "mid",
+      "headline": "Javaに重大な穴「Java4Shell」、各社が修正",
+      "body": "多くの業務システムを動かすJavaの実行環境に、特定の命令に対応した新しめのCPU上で、外から細工した文字列を送るとメモリーが壊れる欠陥（CVE-2026-114938）が見つかりました。発見企業は、Jira、Confluence、Jenkins、Keycloakなどがログインなしで狙われうると説明しています。Oracleなどは17日に修正版を公開。実際の乗っ取り被害は確認されていませんが、攻撃の試みは観測されたと報じられています。",
+      "why": "Javaは社内外の多くのサービスの「土台」です。全部を洗い出して更新するのに時間がかかるため、早めの着手が必要です。",
+      "action": "勤務先の情シス担当に、社内のJavaやJira・Jenkinsなどが修正版になっているか確認してもらう。",
+      "src": "The Hacker News",
+      "url": "https://thehackernews.com/2026/11/java4shell-cve-2026-114938-enables-pre.html"
+    },
+    {
+      "cat": "attack",
+      "level": "mid",
+      "headline": "ウクライナ、IT窓口装うランサム集団を摘発",
+      "body": "ウクライナ警察は、電話で「ITサポート」を名乗って社員をだまし、侵入してデータを人質にするランサムウェア（身代金要求型ウイルス）集団の中心メンバー4人を逮捕しました。少なくとも28社が計4,050万ドル（約60億円）超を支払ったとされ、米FBIと2年以上共同で捜査していました。約66か所を一斉に捜索したと伝えられています。",
+      "why": "技術ではなく「人をだます電話」から侵入されるのが特徴です。日本の企業でも同じ手口が使われる可能性があります。",
+      "action": "社内のIT担当を名乗る電話でも、パスワードや画面共有を求められたら一度切り、正規の窓口にかけ直す。",
+      "src": "Help Net Security",
+      "url": "https://www.helpnetsecurity.com/2026/11/19/ukraine-ransomware-gang-arrests-fake-it-support-calls/"
+    },
+    {
+      "cat": "ai",
+      "level": "mid",
+      "headline": "AI中継ソフトLiteLLMの穴、悪用を確認",
+      "body": "CISAが18日に追加した4件には、複数のAIモデルへの接続をまとめる人気の中継ソフト「LiteLLM」の欠陥も含まれました。ログインできる利用者が、安全確認用の機能を悪用してサーバー上で好きなプログラムを動かせてしまう問題です。4月以降の版では修正済みですが、古い版のまま使われている例が狙われているとみられます。米連邦機関の対応期限は12月2日です。",
+      "why": "AIの導入を急ぐ中、AI用の部品が攻撃の入口になり始めています。APIキーなど重要な情報が集まる場所でもあります。",
+      "action": "社内や個人の開発環境でLiteLLMを使っていれば最新版に更新し、管理画面を外部に公開しない。",
+      "src": "SecurityOnline",
+      "url": "https://securityonline.info/cisa-adds-4-exploited-flaws-kev-synology-litellm/"
+    },
+    {
+      "cat": "attack",
+      "level": "mid",
+      "headline": "Visa、委託先の被害を確認　攻撃集団が主張",
+      "body": "ランサムウェア集団「n0n」が、米VisaとJPモルガン・チェースから情報を盗んだと主張しています。Visaは、アジア太平洋地域の委託先で起きた事案だと認め、自社システムやカード番号などの決済情報への影響を示すものはないと説明しました。JPモルガンは、最近の障害はソフトの不具合でサイバー攻撃の証拠はないとしています。集団の主張の多くは未確認です。",
+      "why": "大手そのものではなく、取引先が破られて情報が漏れる「委託先リスク」の典型例です。",
+      "action": "",
+      "src": "Cybernews",
+      "url": "https://cybernews.com/security/visa-jpmorgan-data-breach/"
+    },
+    {
+      "cat": "industry",
+      "level": "low",
+      "headline": "パロアルト、AI企業を45億ドルで買収へ",
+      "body": "米セキュリティ大手パロアルトネットワークスは18日、公開されたAIモデルを企業向けに調整・運用する米Applied Computeを、株式交換で約45億ドル（約7,000億円）で買収すると発表しました。同日発表の8〜10月期決算は売上高が前年同期比39%増の34.4億ドルと好調でした。セキュリティ専用のAIモデルを自前で育てる狙いです。",
+      "why": "セキュリティ大手が「AIを自前で持つ」競争に本格的に乗り出しています。",
+      "action": "",
+      "src": "SecurityWeek",
+      "url": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/"
+    },
+    {
+      "cat": "policy",
+      "level": "low",
+      "headline": "米下院、AIエージェント管理など4法案",
+      "body": "米下院の国土安全保障委員会の議員らは18日、AIとサイバー対策に関する4つの法案を提出しました。連邦政府のシステムで動くAIエージェント（自分で作業するAI）を特定し、権限を絞り、監視・停止できる枠組み作りや、重大なサイバー事故の原因を調べる調査委員会の新設などが柱です。成立の時期は未定です。",
+      "why": "AIエージェントを「社員のIDのように管理する」考え方が、政府レベルで制度化され始めています。",
+      "action": "",
+      "src": "House Homeland Security Committee",
+      "url": "https://homeland.house.gov/2026/11/18/homeland-republicans-lead-legislation-to-strengthen-modernize-dhss-cybersecurity-mission-as-ai-reshapes-the-threat-landscape/"
+    }
+  ],
+  "trend": {
+    "title": "今週の流れ：「みんなが使う部品」が狙われる",
+    "body": "NASの基本ソフト、Java、AIの中継ソフト、通販の決済画面と、多くの人や企業が共通して使う部品の穴が次々に攻撃や警告の対象になっています。自分で作ったものでなくても、使っている部品の更新状況を把握しておくことが一番の防御になります。"
+  },
+  "calendar": [
+    {
+      "when": "11/21（土）",
+      "what": "米CISAが定めたSonicWall脆弱性の連邦機関向け対応期限（米国20日）",
+      "cat": "vuln"
+    },
+    {
+      "when": "11/22（日）",
+      "what": "米CISAが定めたSynology NAS・Apache Axisなど3件の連邦機関向け対応期限（米国21日）",
+      "cat": "vuln"
+    },
+    {
+      "when": "11/25（水）",
+      "what": "米CISAが定めたChrome・Outlook・Cisco BroadWorksなど悪用済み脆弱性の連邦機関向け対応期限（米国24日）",
+      "cat": "vuln"
+    },
+    {
+      "when": "11月末ごろ",
+      "what": "政府の緊急対策で、経産省の専門家チームが始動予定",
+      "cat": "policy"
+    },
+    {
+      "when": "11月末ごろ",
+      "what": "NVIDIAを名指ししたランサム集団のカウントダウン期限（主張の真偽は未確認）",
+      "cat": "attack"
+    },
+    {
+      "when": "12/2（水）",
+      "what": "米CISAが定めたPuppet脆弱性の連邦機関向け対応期限（米国1日）",
+      "cat": "vuln"
+    },
+    {
+      "when": "12/3（木）",
+      "what": "米CISAが定めたLiteLLM脆弱性の連邦機関向け対応期限（米国2日）",
+      "cat": "ai"
+    },
+    {
+      "when": "12/9（水）早朝",
+      "what": "Microsoftの月例セキュリティ更新（米国8日）",
+      "cat": "vuln"
+    },
+    {
+      "when": "12/12（土）",
+      "what": "米国のサイバー脅威情報共有法の延長期限（米国11日）",
+      "cat": "policy"
+    }
+  ]
+}
